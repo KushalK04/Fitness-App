@@ -59,3 +59,8 @@
 .exercise-entry-hidden {
   display: none;
 }
+
+.exercise-details {
+  color: white;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

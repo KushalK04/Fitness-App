@@ -15,7 +15,6 @@ export default function Home() {
             </div>
             <div className={styles.divNavButton}>
               <button className={styles.navHome}>HOME</button>
-              <button className={styles.navBut}>ABOUT US</button>
             </div>
           </nav>
         </header>

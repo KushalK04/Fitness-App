@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import styles from '@/styles/exercise.module.css';
 import ExerciseTracker from '../components/ExerciseTracker';
+import Link from 'next/link';
 
 export default function EXERCISE() {
   return (
@@ -12,11 +12,13 @@ export default function EXERCISE() {
               <img src="navLogo.svg" className={styles.logo} alt="Thrive logo" />
             </div>
             <div className={styles.divNavButton}>
-              <button className={styles.navHome}>HOME</button>
-              <button className={styles.navBut}>ABOUT US</button>
+                <Link href='/dashboard'>
+                    <button className={styles.navHome}>HOME</button>
+                </Link>
             </div>
           </nav>
         </header>
+        <h1 className={styles.heading}>EXERCISE LOG</h1>
         <ExerciseTracker/>
       </main>
     </>

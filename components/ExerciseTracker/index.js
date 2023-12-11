@@ -100,7 +100,7 @@ const ExerciseTracker = () => {
             key={index}
             className={`${styles['exercise-entry']} ${index > 13 ? styles['exercise-entry-hidden'] : ''}`}
           >
-            <span>{exercise.exerciseName} - {exercise.reps} reps - {exercise.sets} sets</span>
+            <span className={styles['exercise-details']}>{exercise.exerciseName} - {exercise.reps} reps - {exercise.sets} sets</span>
             <div>
               <button
                 className={styles.widgetbutton}

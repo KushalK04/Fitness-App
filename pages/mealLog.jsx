@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from '@/styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Nutrition() {
   const [query, setQuery] = useState('');
@@ -37,7 +38,20 @@ export default function Nutrition() {
 
   return (
     <>
+       <header className={styles.header}>
+          <nav className={styles.navbar}>
+            <div className={styles.logo}>
+              <img src="navLogo.svg" className={styles.logo} alt="Thrive logo" />
+            </div>
+            <div className={styles.divNavButton}>
+                <Link href='/dashboard'>
+                    <button className={styles.navHome}>HOME</button>
+                </Link>
+            </div>
+          </nav>
+        </header>
       <main className={styles.main}>
+        
         <div>
           <label>
             Enter your Food Item:{' '}
