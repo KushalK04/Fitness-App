@@ -1,5 +1,10 @@
 import { useState } from 'react';
+<<<<<<< HEAD
 import styles from '@/styles/Dashboard.module.css';
+=======
+import styles from '@/styles/Home.module.css';
+import Link from 'next/link';
+>>>>>>> 2b4e60e130cc774d27f8998271d72c7bfb477218
 
 export default function Nutrition() {
   const [query, setQuery] = useState('');
@@ -37,9 +42,27 @@ export default function Nutrition() {
 
   return (
     <>
+       <header className={styles.header}>
+          <nav className={styles.navbar}>
+            <div className={styles.logo}>
+              <img src="navLogo.svg" className={styles.logo} alt="Thrive logo" />
+            </div>
+            <div className={styles.divNavButton}>
+                <Link href='/dashboard'>
+                    <button className={styles.navHome}>HOME</button>
+                </Link>
+            </div>
+          </nav>
+        </header>
       <main className={styles.main}>
+<<<<<<< HEAD
         <div className={styles.maindiv}>
           <label className={styles.widgetheader}>
+=======
+        
+        <div>
+          <label>
+>>>>>>> 2b4e60e130cc774d27f8998271d72c7bfb477218
             Enter your Food Item:{' '}
           </label>
           <input
