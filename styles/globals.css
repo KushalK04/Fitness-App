@@ -7,14 +7,21 @@
 --anti-flash-white: rgba(236, 236, 236, 0.75);
 }
 
+a {
+  text-decoration: none;
+}
 
 body {
 
   background-color: var(--soft-black);
 }
 
+li {
+  width: 100%;
+}
 h1, h2, h3, h4, p, button, label, strong {
   font-family: 'Bebas Neue', sans-serif;
   margin: 0;
   padding: 0;
 }
+

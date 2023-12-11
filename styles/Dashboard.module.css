@@ -69,6 +69,7 @@
   font-size: 2rem;
 }
 
+
 .widgetbutton {
   background-color: var(--mindaro);
   color: var(--soft-black);
@@ -95,12 +96,23 @@
   font-size: 32px;
 }
 
+.banandiv1 {
+  
+  margin-top: 5%;
+    color: var(--sea-salt);
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
 .banandiv {
   margin-top: 5%;
   color: var(--sea-salt);
   width: 100vh;
 }
-
 .ali {
   text-align: center;
 }

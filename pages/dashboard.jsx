@@ -34,11 +34,6 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.widget}>
-                    <h2 className={styles.widgetheader}>
-                    CALENDER
-                    </h2>
-                </div>
-                <div className={styles.widget}>
                     <div className={styles.mealscontainer}>
                         <h2 className={styles.widgetheader}>
                         Nutrition Tracker
