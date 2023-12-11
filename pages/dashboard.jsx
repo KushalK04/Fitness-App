@@ -1,8 +1,11 @@
 import styles from '@/styles/Dashboard.module.css';
 import Link from 'next/link';
 import MealTracker from '../components/MealTracker';
+import { useState } from 'react';
+import Calendar from 'react-calendar';
 
 export default function Home() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <>
       <main className={styles.main}>
@@ -28,14 +31,19 @@ export default function Home() {
                         <button className={styles.widgetbutton}> 
                             VIEW LOG 
                         </button>
-
                     </div>
                 </div>
                 <div className={styles.widget}>
                     <h2 className={styles.widgetheader}>
                     CALENDER
                     </h2>
-                    
+                    <Calendar
+                      onChange={setSelectedDate}
+                      value={selectedDate}
+                      className={styles.reactCalendar}
+                      tileClassName={styles.reactCalendarTile}
+                      calendarClassName={styles.reactCalendarContainer}
+                    />
                 </div>
                 <div className={styles.widget}>
                     <div className={styles.buttoncontainer}>

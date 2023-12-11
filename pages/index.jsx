@@ -19,7 +19,7 @@ export default function Home() {
         <section className={styles.mainCont}>
           <div className={styles.welcomeHome}>
             <h1 className={`${styles.welcome} animated-text`}>
-              kushal 
+              WELCOME TO
             </h1>
             <h1 className={`${styles.thrive} animated-text`}>
               THRIVE
