@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Dashboard.module.css';
 
 export default function Nutrition() {
   const [query, setQuery] = useState('');
@@ -38,25 +38,26 @@ export default function Nutrition() {
   return (
     <>
       <main className={styles.main}>
-        <div>
-          <label>
+        <div className={styles.maindiv}>
+          <label className={styles.widgetheader}>
             Enter your Food Item:{' '}
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
           </label>
-          <button onClick={handleSearch}>Search</button>
+          <input
+            className={styles.in}
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button onClick={handleSearch} className={styles.search}>Search</button>
         </div>
 
         {nutritionData && (
-          <div>
-            <h1>Nutrition Data</h1>
-            <ul>
+          <div className={styles.banandiv}>
+            <h1 className={styles.ali}>Nutrition Data</h1>
+            <ul className={styles.content}>
               {nutritionData.items.map((item, index) => (
                 <li key={index}>
-                  <strong>{item.name}</strong>
+                  <strong className={styles.banan}>{item.name}</strong>
                   <p>Calories: {item.calories}</p>
                   <p>Serving Size: {item.serving_size_g} g</p>
                   <p>Fat: {item.fat_total_g} g</p>
@@ -68,7 +69,7 @@ export default function Nutrition() {
                   <p>Carbohydrates: {item.carbohydrates_total_g} g</p>
                   <p>Fiber: {item.fiber_g} g</p>
                   <p>Sugar: {item.sugar_g} g</p>
-                  
+
                 </li>
               ))}
             </ul>
@@ -78,3 +79,6 @@ export default function Nutrition() {
     </>
   );
 }
+
+
+

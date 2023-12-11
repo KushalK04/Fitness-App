@@ -60,7 +60,7 @@ export default function Home() {
                 <div className={styles.widget}>
                     <div className={styles.mealscontainer}>
                         <h2 className={styles.widgetheader}>
-                        MEAL TRACKER
+                        Nutrition Tracker
                         </h2>
                         <button className={styles.widgetbutton2}> 
                             <Link href='/mealLog'>
