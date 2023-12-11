@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 
 export default function Home() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <>
       <main className={styles.main}>
@@ -26,10 +25,12 @@ export default function Home() {
                 <div className={styles.widget}>
                     <div className={styles.buttoncontainer}>
                         <h2 className={styles.widgetheader}>
-                        EXERCISE LOG
+                           EXERCISE LOG
                         </h2>
                         <button className={styles.widgetbutton}> 
-                            VIEW LOG 
+                          <Link href='/exerciseLog'>
+                            VIEW LOG
+                          </Link> 
                         </button>
                     </div>
                 </div>
@@ -37,25 +38,6 @@ export default function Home() {
                     <h2 className={styles.widgetheader}>
                     CALENDER
                     </h2>
-                    <Calendar
-                      onChange={setSelectedDate}
-                      value={selectedDate}
-                      className={styles.reactCalendar}
-                      tileClassName={styles.reactCalendarTile}
-                      calendarClassName={styles.reactCalendarContainer}
-                    />
-                </div>
-                <div className={styles.widget}>
-                    <div className={styles.buttoncontainer}>
-                        <h2 className={styles.widgetheader}>
-                        WEIGHT LOG
-                        </h2>
-                        <button className={styles.widgetbutton}> 
-                            VIEW LOG 
-                        </button>
-
-                    </div>
-                    
                 </div>
                 <div className={styles.widget}>
                     <div className={styles.mealscontainer}>
